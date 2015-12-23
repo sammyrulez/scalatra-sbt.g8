@@ -8,7 +8,7 @@ class $servlet_name$Spec extends ScalatraSuite with FunSuiteLike  {
 
   implicit val swagger = new $servlet_name$Swagger
 
-  addServlet(new $servlet_name$, "/*")
+  addServlet(new $servlet_name$, "/$servlet_name$/*")
 
 
   test("simple get") {

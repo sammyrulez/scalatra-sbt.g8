@@ -12,7 +12,7 @@ val get$servlet_name$ =
         summary "$servlet_name$ Demo"
         notes "$servlet_name$ demo API")
 
-get("/",operation(getFlowers)) {
+get("/",operation(get$servlet_name$)) {
 
     List("$servlet_name$")
 }
