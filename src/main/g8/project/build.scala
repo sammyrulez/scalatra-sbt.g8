@@ -26,8 +26,12 @@ object $name;format="Camel"$Build extends Build {
       libraryDependencies ++= Seq(
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-scalate" % ScalatraVersion,
-        "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
+        "org.scalatra" %% "scalatra-json" % ScalatraVersion,
+        "org.scalatra" %% "scalatra-swagger"  % ScalatraVersion,
+        "org.json4s"   %% "json4s-native" % "3.3.0",
+        "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
         "ch.qos.logback" % "logback-classic" % "1.1.3" % "runtime",
+        "org.slf4j" % "slf4j-simple" % "1.7.13" % "runtime",
         "org.eclipse.jetty" % "jetty-webapp" % "9.2.14.v20151106" % "container",
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
       ),

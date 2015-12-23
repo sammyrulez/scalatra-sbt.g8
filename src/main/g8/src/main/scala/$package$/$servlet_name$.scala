@@ -1,17 +1,20 @@
 package $package$
 
-import org.scalatra._
-import scalate.ScalateSupport
+import org.scalatra.swagger.Swagger
+import org.scalatra.swagger._
 
-class $servlet_name$ extends $name;format="Camel"$Stack {
+class $servlet_name$(implicit val swagger: Swagger)  extends $name;format="Camel"$Stack  with SwaggerSupport {
 
-  get("/") {
-    <html>
-      <body>
-        <h1>Hello, world!</h1>
-        Say <a href="hello-scalate">hello to Scalate</a>.
-      </body>
-    </html>
-  }
+protected val applicationDescription = "The flowershop API. It exposes operations for browsing and searching lists of flowers, and retrieving single flowers."
+
+val get$servlet_name$ =
+        (apiOperation[List[String]]("get$servlet_name$")
+        summary "$servlet_name$ Demo"
+        notes "$servlet_name$ demo API")
+
+get("/",operation(getFlowers)) {
+
+    List("$servlet_name$")
+}
   
 }
